@@ -124,14 +124,25 @@ table {
 
     .left-section{
         display:flex;
-        width: 50%;
+        width: 38%;
         justify-content: flex-end;
     }
     .right-section{
         display: flex;
-        width: 50%;
+        width: 20%;
+        justify-content: center;
+    }
+    .middle-section{
+        display: flex;
         justify-content: flex-start;
         flex-direction: column;
+        width: 13%;
+    }
+    .about-me-text-container{
+        color: white;
+        font-size: 20px;
+        line-height: 130%;
+        font-weight: 100;
     }
 
     .contact-format{
@@ -161,9 +172,6 @@ table {
 </style>
 
 <body>
-
-    
-
     <div class="navbar">
         <div class="empty-div"></div>
         <div class="my-name">
@@ -184,8 +192,8 @@ table {
         <div class="left-section">
             <img src="ProfilePicture.png" alt="My Picture" class="profile-image">
         </div>
-    
-        <div class="right-section">
+
+        <div class="middle-section">
             <div class="clickable-link">
                 <div class="contact-text-container">
                 </div>
@@ -249,8 +257,20 @@ table {
                 </div>
                 <a href="resume.pdf" download class="resume-link"></a>
             </div>
-    
         </div>
+
+        <div class="right-section">
+            <div class="about-me-text-container">
+                Hello, I'm David Rizko, a gameplay engineer passionate about crafting distinctive gaming experiences.
+                Having been a part of several small scale development demos on Unity, I have recently taken my skills to Unreal Engine 5.
+                Driven by ambition, I've embarked on the journey of creating a first-person action roguelike for which
+                I've not only laid the groundwork and infrastructure for the game but also developed essential tools to empower our designers and artists.
+            </div>
+        </div>
+    
+        
+    
+        
     </div> 
 
     <p>
