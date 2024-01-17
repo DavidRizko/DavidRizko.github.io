@@ -1,1 +1,263 @@
-Hello World\n
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="David Rizko">
+    <meta name="description" content="About">
+    <title>About - David Rizko</title>
+</head>
+<style>
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+    body{
+        background-color: #161616;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100vh;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .navbar{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        background-color:#161616;
+        justify-content: space-between;
+    }
+
+    .empty-div{
+        width: 33%;
+    }
+
+    .my-name{
+        color: white;
+        font-size: 80px;
+        font-weight: 100;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        width: 33%;
+    }
+
+    .navbar-container{
+        align-items: right;
+        text-align: right;
+        justify-content: right;
+        width: 33%;
+    }
+
+    .navbar a{
+        color: white;
+        text-decoration: none;
+        text-align: right;
+        align-items: right;
+        justify-content: right;
+        font-size: 25;
+        padding-right: 15px;
+    }
+
+    .contact-title{
+        padding-top: 90px;
+        font-size: 350%;
+        font-weight: 100;
+        color: white;
+        text-align: center;
+        width:100%
+    }
+
+    .left-section{
+        display:flex;
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .right-section{
+        display: flex;
+        width: 50%;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-format{
+        display: flex;
+        width: 100%;
+    }
+
+    .clickable-link{
+        margin: 15px;
+    }
+
+    .contact-icon{
+        width: 45px;
+    }
+
+    .contact-text-container{
+        color: white;
+    }
+
+    .profile-image{
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+</style>
+
+<body>
+
+    
+
+    <div class="navbar">
+        <div class="empty-div"></div>
+        <div class="my-name">
+            <p>David Rizko</p>
+        </div>
+
+        <div class="navbar-container">
+            <a href="index.html">About</a>
+            <a href="#">Portfolio</a>
+        </div>
+    </div>
+
+    <div class="contact-title">
+        Contact Me
+    </div>
+
+    <div class="contact-format">
+        <div class="left-section">
+            <img src="ProfilePicture.png" alt="My Picture" class="profile-image">
+        </div>
+    
+        <div class="right-section">
+            <div class="clickable-link">
+                <div class="contact-text-container">
+                </div>
+                <div class="icon-container">
+                    <a href="https://chefainsley.itch.io/" target="_blank">
+                        <img src="itch-icon.svg" alt="Itch.io Page" class="contact-icon">
+                    </a>
+                </div>
+            </div>
+
+            <!-- GITHUB ICON AND TEXT-->
+            <div class="clickable-link">
+                <div class="contact-text-container">
+                </div>
+                <div class="icon-container">
+                    <a href="https://www.github.com/DavidRizko" target="_blank">
+                        <img src="github-icon.png" alt="GitHub Profile" class="contact-icon">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- LINKEDIN ICON AND TEXT-->
+            <div class="clickable-link">
+                <div class="contact-text-container">
+                </div>
+                <div class="icon-container">
+                    <a href="https://www.linkedin.com/in/david-rizko" target="_blank">
+                        <img src="linked-icon.png" alt="LinkedIn Profile" class="contact-icon">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- EMAIL ICON AND TEXT-->
+            <div class="clickable-link">
+                <div class="contact-text-container">
+                </div>
+                <div class="icon-container">
+                    <a href="mailto:david@rizkocircle.com" target="_blank">
+                        <img src="email-icon.png" alt="Email" class="contact-icon">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- PHONE TEXT-->
+            <div class="clickable-link">
+                <div class="contact-text-container">
+                    <p>Phone: +1(818)858-2725</p>
+                </div>
+            </div>
+    
+            <!-- RESUME TEXT-->
+            <div class="clickable-link">
+                <div class="contact-text-container">
+                    <p>Resume</p>
+                </div>
+        
+                <div class="pdf-container">
+                    <a href="resume.pdf" download class="resume-link" target="_blank">
+                        <img src="pdf-icon.png" alt="PDF Download" class="contact-icon">
+                    </a>
+                </div>
+                <a href="resume.pdf" download class="resume-link"></a>
+            </div>
+    
+        </div>
+    </div> 
+
+    <p>
+        <a href="http://validator.w3.org/check?uri=referer">
+           W3C validator
+        </a>
+      </p>
+</body>
+
+</html>
