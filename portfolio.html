@@ -59,7 +59,7 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        height: 50vh;
+        height: 100vh;
         margin: 0;
     }
 
@@ -128,10 +128,18 @@
         justify-content: space-between;
         margin-top: 15px;
         margin-left: 130px;
+        flex-direction: row;
     }
     
+    .project-title{
+        color: black;
+        font-size: 28px;
+        font-weight: 300;
+        margin-top: 10px;
+    }
+
     .project-icon-container{
-        width: 20%;
+        max-width: 20%;
         margin-left: 20px;
         margin-top: 10px;
     }
@@ -141,6 +149,15 @@
         height: 200px;
         border-radius: 50%;
         object-fit: cover;
+    }
+
+    .project-description-container{
+        color: black;
+        font-size: 22px;
+        font-weight: 100%;
+        text-align: center;
+        width: 30%;
+        margin-top: 52px;
     }
 
     </style>
@@ -167,25 +184,61 @@
         <div class="project-div">
             <div class="project-icon-container">
                 <img src="Ninth-Circle-icon.png" alt="Ninth Circle Picture" class="project-icon">
+                <div class="project-title">
+                    The Ninth Circle
+                </div>
             </div>
+            <div class="project-description-container">
+                A First-Person Shooter, Action-Roguelike delivered straight from hell.
+                Developed in Unreal Engine 5.
+            </div>
+
+            <div></div>
         </div>
 
         <div class="project-div">
             <div class="project-icon-container">
                 <img src="Quantum-Leap-Icon.png" alt="Quantum Leap Picture" class="project-icon">
+                <div class="project-title">
+                    Quantum Leap
+                </div>
             </div>
+            <div class="project-description-container">
+                A First-Person, Rhythm-Based Parkour game, where you race on platforms to
+                put fragmented reality back together. Developed in Unreal Engine 5.
+            </div>
+
+            <div></div>
         </div>
 
         <div class="project-div">
             <div class="project-icon-container">
                 <img src="Retro-Racer-icon.png" alt="Retro Racer Picture" class="project-icon">
+                <div class="project-title">
+                    Retro Racer
+                </div>
             </div>
+            <div class="project-description-container">
+                A Synthwave inspired racing and drifting game on a beautiful track.
+                Developed in the Unity Engine.
+            </div>
+
+            <div></div>
         </div>
 
         <div class="project-div">
             <div class="project-icon-container">
                 <img src="Projecter-icon.png" alt="Projecter Icon" class="project-icon">
+                <div class="project-title">
+                    Imbed LLC.
+                </div>
             </div>
+            <div class="project-description-container">
+                Provided embedded software to help improve digital cinema playback in the development
+                of a new digital cinema server. Developed in C++.
+            </div>
+
+            <div></div>
         </div>
     </body>
 </html>
