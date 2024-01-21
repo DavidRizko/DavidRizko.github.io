@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="David Rizko">
+    <meta name="description" content="Imbed LLC.">
+    <title>The Ninth Circle - David Rizko</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<style>
+    body {
+        background-color: #678983;
+        /* #53617b */
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar-toggler-icon {
+        color: #FAF6F0;
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    h1 {
+        color: #FAF6F0;
+    }
+
+    .h3 {
+        font-weight: 100;
+    }
+
+    .work-description {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        vertical-align: middle;
+        height: auto;
+    }
+
+    .card {
+        background-color: #121525;
+        /* 212a3e */
+    }
+
+    .card-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        color: #f2efe4;
+    }
+
+    .title-text {
+        font-size: 40px;
+        font-weight: 800;
+        color: #f2efe4;
+        /* f1f6f9 */
+    }
+
+    .sub-title-text {
+        font-size: 26px;
+        color: #f2efe4;
+        /*f1f6f9*/
+    }
+</style>
+
+<body>
+    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg sticky-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <h1 class="display-3">David Rizko</h1>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item h3">
+                        <a class="nav-link" aria-current="page" href="../../index.html">About Me</a>
+                    </li>
+                    <li class="nav-item h3">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid work-description">
+        <div class="card m-5">
+            <div class="card-header bg-transparent border-success title-text">The Ninth Circle</div>
+            <div class="card-body text-success">
+                <p class="card-text">The goal at Imbed LLC. was to design, develop
+                    and improve digital cinema servers by increasing the native resolution,
+                    increasing the frame rate of playback, and improve audio by increasing
+                    the number and frequency of the audio channels. The project needed to stay within
+                    the guidelines of digital cinema standards as defined by SMPTE(Society of Motion Picture
+                    and Television Engineers).
+                </p>
+                <hr>
+                <p class="sub-title-text">Core Mechanics</p>
+                <img src="../../assets/xml-stock-photo.png" alt="XML Stock Photo" class="card-img">
+                <p class="card-text">The first step was to develop code to accept digital cinema files
+                    which came in the forms of XML(Extensible Markup Language) and MXF(Material Exchange Format) files.
+                    The XML files defined the basic structure of movie playback and the order in which the reels need to
+                    be sent to the digital projectors of cinema as well as packaging metadata required by the digital
+                    cinema
+                    projectors. Once the programs for compilation of the Composition playlists were complete, I moved on
+                    to
+                    parsing the subtitle files which came in XML format and prepared them to be played alongside video
+                    and
+                    audio frames by our playback engine.
+                </p>
+                <p class="sub-title-text">Weapon Development</p>
+                <p class="card-text">My next task was to parse and gather information from MXF files which were
+                    responsible
+                    for the transfer of video and audio data of a movie. These came in the form of encoded packets with
+                    corresponding
+                    keys designated by the standards of cinema. My job was to parse through these files in the form of a
+                    breadth-first search algorithm, logging all keys and nested keys before identifying all necessary
+                    packets. Once all the video and audio packets were identified in the tree, I extracted the audio
+                    and frames into a folder to be used in digital playback.
+                </p>
+                <hr>
+                <p class="sub-title-text">Perk Component</p>
+                <p class="card-text">The culmination of my work at Imbed was the digital playback engine. It required
+                    the entirety
+                    of my programs and parsers in order to function correctly. Using a cyclical buffer, we synchronized
+                    the playback
+                    of audio and video frames, and if the flag was set, played the subtitles in sync with the rest of
+                    the movie. The
+                    combination of these 3 projects provided the testing environment for the rest of the embedded
+                    applications we would
+                    include on the cinema server itself.
+                </p>
+                <hr>
+                <p class="sub-title-text">VFX</p>
+                <p class="card-text"> VFX Text</p>
+                <hr>
+                <p class="sub-title-text">Procedural Generation with Level Design</p>
+                <p class="card-text">Procedural Generation with Level Design text</p>
+                <hr>
+            </div>
+            <div class="card-footer bg-transparent border-success">Links to Itch Page and Github</div>
+        </div>
+    </div>
+
+
+</body>
