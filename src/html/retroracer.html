@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="author" content="David Rizko">
     <meta name="description" content="Imbed LLC.">
-    <title>Retro Racer - David Rizko</title>
+    <title>Retro Race - David Rizko</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -56,7 +56,7 @@
     }
 
     .card-img {
-        width: 100%;
+        width: 50%;
         height: auto;
         margin-bottom: 10px;
     }
@@ -80,11 +80,15 @@
         /* color: #d9f5ff; */
         /*f1f6f9*/
     }
-    /* .bs-success-rgb{
-        color: #ff5900;
-    } */
 
-    hr{
+    .contact-icon {
+        width: 40px;
+        margin-right: 24px;
+        margin-top: 15px;
+        align-items: center;
+    }
+
+    hr {
         color: #ff5900;
         opacity: 1;
         border-top: 3px solid;
@@ -115,50 +119,83 @@
 
     <div class="container-fluid work-description">
         <div class="card m-5">
-            <div class="card-header bg-transparent border-success title-text">Retro Racer</div>
+            <div class="card-header bg-transparent border-success title-text">Retro Race</div>
             <div class="card-body text-success">
-                <p class="card-text">The goal at Imbed LLC. was to design, develop
-                    and improve digital cinema servers by increasing the native resolution,
-                    increasing the frame rate of playback, and improve audio by increasing
-                    the number and frequency of the audio channels. The project needed to stay within
-                    the guidelines of digital cinema standards as defined by SMPTE(Society of Motion Picture
-                    and Television Engineers).
+                <p class="card-text">Retro Race is a synthwave inspired racing game in which the player can pick
+                    between a list of cars and race a computer on a track in space. The goal of this project was to
+                    become
+                    more familiar with mathematic concepts applied on the level of the Unity game engine through the
+                    development
+                    of a drifting mechanism similar to other racing games such as Forza and Underground.
                 </p>
                 <hr>
-                <p class="sub-title-text">XML and MXF Parsing</p>
-                <img src="../../assets/xml-stock-photo.png" alt="XML Stock Photo" class="card-img">
-                <p class="card-text">The first step was to develop code to accept digital cinema files
-                    which came in the forms of XML(Extensible Markup Language) and MXF(Material Exchange Format) files.
-                    The XML files defined the basic structure of movie playback and the order in which the reels need to
-                    be sent to the digital projectors of cinema as well as packaging metadata required by the digital
-                    cinema
-                    projectors. Once the programs for compilation of the Composition playlists were complete, I moved on
-                    to
-                    parsing the subtitle files which came in XML format and prepared them to be played alongside video
-                    and
-                    audio frames by our playback engine.
-                </p>
-                <p class="card-text">My next task was to parse and gather information from MXF files which were
-                    responsible
-                    for the transfer of video and audio data of a movie. These came in the form of encoded packets with
-                    corresponding
-                    keys designated by the standards of cinema. My job was to parse through these files in the form of a
-                    breadth-first search algorithm, logging all keys and nested keys before identifying all necessary
-                    packets. Once all the video and audio packets were identified in the tree, I extracted the audio
-                    and frames into a folder to be used in digital playback.
+                <p class="sub-title-text">Infrastructure</p>
+                <img src="../../assets/retro-racer-pic1.png" alt="Retro Race Menu Picture" class="card-img">
+                <p class="card-text">
+                    In Retro Race's development, I focused on creating a versatile infrastructure for various cars, with
+                    each car's model being inspired by Synthwave texture materials.
+                    I implemented an inheritance system, providing fundamental controls while allowing individual cars
+                    to define specific attributes like speed, acceleration, and traction.
+                    This approach not only allowed me to design the behavior of an AI car much easier, but it also
+                    provided a learning experience through the
+                    incorporation of essential physics concepts like momentum and vector decomposition.
                 </p>
                 <hr>
-                <p class="sub-title-text">Digital Playback Engine</p>
-                <p class="card-text">The culmination of my work at Imbed was the digital playback engine. It required
-                    the entirety
-                    of my programs and parsers in order to function correctly. Using a cyclical buffer, we synchronized
-                    the playback
-                    of audio and video frames, and if the flag was set, played the subtitles in sync with the rest of
-                    the movie. The
-                    combination of these 3 projects provided the testing environment for the rest of the embedded
-                    applications we would
-                    include on the cinema server itself.
+                <p class="sub-title-text">Drifting Mechanics</p>
+                <img src="../../assets/retro-racer-pic2.png" alt="Retro Racer Gameplay Picture" class="card-img">
+                <p class="card-text">The drifting mechanic of Retro Race was overall the most difficult part of the
+                    development, but it also provided a sense of
+                    uniqueness to our game in comparison with other game demos made in our cohort. While initially we
+                    thought it would be as simple as take a diagonal
+                    vector and sending the force in that direction, we quickly found that the graphical representation
+                    of our attempt would not match up at all with
+                    what we were trying to achieve. My job was to try and find a way using a Unity provided function to
+                    determine a more precise way of applying the
+                    forward force on the car without ruining the in-world representation of the car. The method I found
+                    was to use a linear-interpolation, a function
+                    that I would use many more times in future endeavours. By LERPing between the forward and horizontal
+                    axis, I found a better normal to apply a force
+                    to the player's car, and by storing the value, we could also define how the car should be spun on
+                    the z-axis to provide visual semblance of drifting in the
+                    game. Once we had perfected our drifting system, we applied it to the opposing AI car, created a
+                    finish line on the track, and enhanced our game manager to
+                    feature an end-screen for the race itself. Our final step would be to add variation in our game
+                    using power-ups.
                 </p>
+                <hr>
+                <p class="sub-title-text">Power-Ups</p>
+                <img src="../../assets/retro-racer-pic3.png" alt="Retro Racer PowerUp Picture" class="card-img">
+                <p class="card-text">During the design phase of our game, we were thinking of ways we can help the
+                    player get used to the mechanics of the game
+                    without them thinking they are being blown out of the race by the AI every time. Drifting games are
+                    hard, and we wanted to even the playing field.
+                    We came up with 2 different ideas centered around the same in-game object, a pickup. The first
+                    iteration of the pickup was that the player would be
+                    gaining a "boost" meter which would temporarily accelerate the car based on how filled the boost
+                    meter is and the only way to replenish it would be
+                    to drift, or drive over the pickups on the track.
+                    The second pickup type we created was specific power-ups with different stimuli, such as making it
+                    more difficult to see the screen, reducing the other car's
+                    overall speed for a few seconds, or increasing your own car's capabilities. We developed these
+                    power-ups with the idea that they should be easy to
+                    pickup on the track, and they should be easy to understand the effect based on the model and VFX
+                    that are attributed to it.
+                </p>
+                <hr>
+                <p class="card-text">Ultimately, this game served the purpose of introducing real-world mathematical
+                    problems to video-games and improving my understanding
+                    of how math concepts are incorporated into game worlds. It also served as an introduction of
+                    creating stimulus effects whether it be on opposing AI
+                    or applying an effect to the player themselves. Feel free to try it out from our Github!
+                </p>
+            </div>
+
+            <div class="card-footer bg-transparent border-success">
+                <div class="icon-container">
+                    <a href="https://www.github.com/DavidRizko/RetroRacer" target="_blank">
+                        <img src="../../assets/github-icon-white.png" alt="Github Game Page" class="contact-icon">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
