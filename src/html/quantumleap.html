@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="David Rizko">
+    <meta name="description" content="Imbed LLC.">
+    <title>Retro Race - David Rizko</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #1d7aa2;
+            /* #53617b */
+        }
+
+        .navbar {
+            width: 100%;
+        }
+
+        .navbar-toggler-icon {
+            color: #FAF6F0;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        h1 {
+            color: #FAF6F0;
+        }
+
+        .h3 {
+            font-weight: 100;
+        }
+
+        .work-description {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            vertical-align: middle;
+            height: auto;
+        }
+
+        .card {
+            background-color: #0d0d0e;
+        }
+
+        .card-img {
+            width: 50%;
+            height: auto;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .card-text {
+            color: #f9ecff;
+        }
+
+        .title-text {
+            font-size: 40px;
+            font-weight: 800;
+            color: #f9ecff;
+        }
+
+        .sub-title-text {
+            font-size: 26px;
+            color: #f9ecff;
+        }
+
+        .contact-icon {
+            width: 40px;
+            margin-right: 24px;
+            margin-top: 15px;
+            align-items: center;
+        }
+
+        hr {
+            color: #f837b5;
+            opacity: 1;
+            border-top: 3px solid;
+        }
+
+        .border-success {
+            --bs-success-rgb: #f837b5;
+        }
+
+        .image-box {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .youtube-link{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg sticky-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <h1 class="display-3">David Rizko</h1>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item h3">
+                        <a class="nav-link" aria-current="page" href="../../index.html">About Me</a>
+                    </li>
+                    <li class="nav-item h3">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container-xxl work-description">
+        <div class="card m-5">
+            <div class="card-header bg-transparent border-success title-text">Quantum Leap</div>
+            <div class="youtube-link">
+                <iframe width="1024" height="420" src="https://www.youtube.com/embed/Rkziy-VqsiE?autoplay=1&mute=0"></iframe>
+            </div>
+            </iframe>
+            <div class="card-body text-success">
+                <p class="card-text">Quantum Leap is a rhythm-based Parkour Game where players can select the song they
+                    wish
+                    to play on, and most direct the character to land their jumps on a platform. The more platforms and
+                    walls you
+                    hit, the higher your score. The goal is to either beat the friend playing next to you on the couch,
+                    or set a high
+                    score for yourself.
+                </p>
+                <p class="card-text">
+                    Quantum Leap was the first game I ever developed in Unreal 5, the experience of using a powerful and
+                    complex engine
+                    opened my eyes to the possibilities of what could be done with the engine. It inspired me to develop
+                    The Ninth Circle.
+                </p>
+                <hr>
+                <p class="sub-title-text">Level Generation</p>
+                <img src="../../assets/quantum-leap-pic3.png" alt="Quantum Leap Platform Picture" class="card-img">
+                <p class="card-text">Being a rhythm based game, the levels we needed to create needed to be extremely
+                    meticulous. We started
+                    by hand-crafting our levels and placing platforms and walls at constant distances. We soon realized
+                    that this wasn't going to work,
+                    if we wanted to add multiple playable songs to the game, we had to come up with a better way to
+                    generate these platforms as well as their lengths
+                    and distances. I discovered that a popular rhythm based game called OSU!, had a program that we
+                    could use to generate a beat map. Once we tested out
+                    a few songs in the beat map, we would import these beat maps into the game, and from the information
+                    gathered by these beat maps, we would place platforms
+                    and walls instead of buttons to click or hold sequences. Once we had perfected our system, we began
+                    by creating the controls and basic infrastructure of
+                    the core game loop.
+                </p>
+                <hr>
+                <p class="sub-title-text">Infrastructure</p>
+                <img src="../../assets/quantum-leap-pic5.png" alt="Quantum Leap Gameplay Picture" class="card-img">
+                <p class="card-text">The next step for myself and the team was to calculate the necessary jump height,
+                    drops and pace of the game so that the
+                    players would have the opportunity to actually land on the platform and score more points. We
+                    effectively grouped all the platforms and walls
+                    in the level, and since they were meant to be hit in a perfect sequence, we would iterate through
+                    the list of objects step-by-step, analyzing the distance
+                    and type of object we were going to hit. Once we managed to calculate these distances, we moved on
+                    to creating the wall ride in the game.
+                    Our wall ride is more of a visual effect than it is an actual wall ride. Because the player is never
+                    meant to really turn their head down, we found
+                    that the best way to add a wall ride in the game was to lock the camera to the wall, and slide the
+                    camera across until the jump had to be triggered. With
+                    a little camera tilt and arm sticking out towards the wall, we gave the idea to the player that they
+                    were actually wall riding, and depending on the origin
+                    height of the wall ride, the camera would slide across that point.
+                </p>
+                <img src="../../assets/quantum-leap-pic4.png" alt="Quantum Leap UI picture" class="card-img">
+                <p class="card-text">The next step was to create the score system. Since we wanted our game to support
+                    up to 4 players connected to the same system,
+                    we created a UI panel to count the score and display it to the player. While the score counts up
+                    passively, it jumps up based on the platforms hit,
+                    how accurately the player hit the wall ride, and it increases based on a multiplier for the number
+                    of platforms hit in sequence(the multiplier has a cap).
+                    Once this was created, all we had left to do was texture the levels, make a cutscene for the
+                    narrative of the game, and create a list of songs for the player to choose from.
+                </p>
+                <hr>
+                <p class="sub-title-text">Level Texturing</p>
+                <img src="../../assets/quantum-leap-pic6.png" alt="Quantum Leap Ring Particles" class="card-img">
+                <p class="card-text">Harnessing Unreal 5's graphical capabilities, we wanted to generate neon textures,
+                    particle effects, and glows
+                    on the platforms on a dark level for the player's immersion. We started by creating a ring in the
+                    distance that the player approaches as they
+                    get closer to the end of the level itself, and after learning the particle generator in Unreal
+                    5(before Lumen), my colleagues and I were more equipped to create gradient colored particles.
+                </p>
+                <img src="../../assets/quantum-leap-pic7.png" alt="Quantum Leap Wall Object" class="card-img">
+                <img src="../../assets/quantum-leap-pic8.png" alt="Quantum Leap Platform Object" class="card-img">
+                <p class="card-text">
+                    After the design of the end ring, we moved on to creating the platforms and making the edges glow,
+                    as well as making the plane of the level
+                    reflective to align with the narrative of the game. By increasing the Bloom attributes of the
+                    materials in the game, we were able to make a
+                    glow powerful enough to reflect on a black mirror.
+                </p>
+                <img src="../../assets/quantum-leap-pic9.png" alt="Player Surrounding Particles" class="card=img">
+                <p class="card-text">
+                    The last addition we made to particles and texturing was to give the player a surround particle
+                    effect. By encompassing
+                    in leaf type particles, we randomize the color and glow of the particles surrounding the player.
+                    This was made possible
+                    by the Niagra system provided by Unreal, it was the product of all of our knowledge on particle
+                    generation, and texturing.
+                    The final step was to add our narrative elements and create a menu for the player to select their
+                    song.
+                </p>
+                <hr>
+                <p class="sub-title-text">The Narrative</p>
+                <img src="../../assets/quantum-leap-pic1.png" alt="Quantum Leap Cut Scene 1" class="card-img">
+                <img src="../../assets/quantum-leap-pic10.png" alt="Quantum Leap Cut Scene 2" class="card-img">
+                <img src="../../assets/quantum-leap-pic11.png" alt="Quantum Leap Cut Scene 3" class="card-img">
+
+                <p class="card-text">An artist on the team drew single frame drawings depicting what occured during the
+                    game. The narrative is as follows,
+                    your starship's engine ends up splitting reality, creating multiple copies of the player, the one
+                    who reaches the end(highest score), becomes
+                    the version of the main character that restores reality to its original dimension and closes all
+                    other alternate dimensions, thus becoming,
+                    the original. Our colleague created both a cut scene, and an end game cut scene before announcing
+                    the winner.
+                </p>
+            </div>
+
+            <div class="card-footer bg-transparent border-success">
+                <p class="card-text">Feel free to check out our game, downloadable from our Itch.io page and includes
+                    gamepad support!</p>
+                <div class="icon-container">
+                    <a href="https://www.github.com/DavidRizko/QuantumLeap" target="_blank">
+                        <img src="../../assets/github-icon-white.png" alt="Github Game Page" class="contact-icon">
+                    </a>
+                    <a href="https://cameronrome.itch.io/quantum-leap" target="_blank">
+                        <img src="../../assets/itch-icon.svg" alt="Itch Game Page" class="contact-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
