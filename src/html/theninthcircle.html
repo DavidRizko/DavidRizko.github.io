@@ -114,19 +114,67 @@
                 </p>
                 <hr>
                 <p class="sub-title-text">Core Mechanics</p>
-                <img src="../../assets/xml-stock-photo.png" alt="XML Stock Photo" class="card-img">
-                <p class="card-text">The first step was to develop code to accept digital cinema files
-                    which came in the forms of XML(Extensible Markup Language) and MXF(Material Exchange Format) files.
-                    The XML files defined the basic structure of movie playback and the order in which the reels need to
-                    be sent to the digital projectors of cinema as well as packaging metadata required by the digital
-                    cinema
-                    projectors. Once the programs for compilation of the Composition playlists were complete, I moved on
-                    to
-                    parsing the subtitle files which came in XML format and prepared them to be played alongside video
-                    and
-                    audio frames by our playback engine.
+                <img src="..." alt="Dash and Jump Mechanics" class="card-img">
+                <p class="card-text">From the start of the design, we knew we wanted to have a super jump and a dash,
+                    allowing our players to utilize verticality at different points of the level would give them the chance
+                    to escape the hordes of enemies that would chase them. Aside from the basic mechanics of firing a weapon,
+                    moving and a basic jump, our choice of variance in gameplay would hinge on 2 different principles: the 
+                    augmentation of a mechanic, or the replacement of it. This decision centered around the ideal that the
+                    synergies the players would come up with match the playstyle of their core mechanics while also introducing
+                    the first important element of roguelike/roguelite games which was the idea of a give-and-take.
+                </p>
+                <p class="card-text">
+                    Progression in roguelikes are always a hard thing to tackle, you don't want the player to feel too powerful,
+                    and you don't want them to feel like they aren't improving either. From this mindset we came up with 2 parts of our core mechanic,
+                    the first would be progression through a system of perks and the second a system of Augments. The perks would
+                    serve as passive bonuses while the augments would enhance or replace existing mechanics in the game like jump and dash
+                    with varied versions providing a stimulus effect that would entice the player to decide what kind of synergy they want to achieve.
+                    Once we agreed upon how these systems would work and after the core mechanics of movement and combat were made, we moved on to
+                    enhancing our weapons themselves.
                 </p>
                 <p class="sub-title-text">Weapon Development</p>
+                <p class="card-text">All models in our games besides textures and materials are original models, crafted and themed
+                    meticulously to the horror aspect of the game, we iterated through 2 different versions of combat before settling
+                    on the system that would remain for the duration of our development stage. The first stage of weapon development was
+                    to create bullet objects and have our hit detection and combat system be physics based, the game would wait for the bullet
+                    to collide with an enemy hitbox before applying on-hit effects. After a few additions to the game, we realized that this system
+                    would eventually fail us; we wanted to create an extremely fast-paced roguelike environment unlike one any game
+                    has attempted, and the weapon system we had in place was too slow, required too many resources and ultimately was not scalable.
+                    What we ended up doing was replacing the existence of our physics based hit software with a vector based one using
+                    the Line Trace component provided by Unreal. Once we had included this system in the game, we decided to add a more
+                    realistic visual effect of firing your weapon by creating a socket at the muzzle of the weapon which would be the origin point
+                    for the audio track of the bullet itself, as well as a bullet tracer to provide a feedback system to the player to see where
+                    exactly their bullets are hitting.
+                </p>
+                <p class="card-text">The final last change to the overall infrastructure of our weapons was the creation of tools and templates to
+                    improve the speed and functionality of newer weapons we wished to develop. I created a series of template components and actor objects
+                    in the game that would ease the process of new weapons being developed by our designers and programmers in a way where the only programming
+                    needed was the specific method of weapon firing, reload and weapon specific attributes. Once this tool was created, we developed our second weapon
+                    and added it into the game in a short period of time. Once these weapons were developed and tested, the next step was to develop the first progression
+                    system for the players, the perks.
+                </p>
+                <hr>
+                <p class="sub-title-text">Perk Component</p>
+                <p class="card-text">The perk system was particularly interesting to develop, we had reached a point in our development where balancing was
+                    becoming a more crucial aspect of gameplay. Our perk system was meant to enhance the player's basic attributes including but not limited to
+                    movement speed, magazine side, and weapon damage. The architecture of the perk system hinges on a method of spawning an actor into the game once the room
+                    was considered complete(all enemies dead). The actor itself that spawned would have target component attached to it, that once picked up by the player,
+                    would recalculate one of the basic attributes mentioned above, and attaching it to the perk container managed by the main character's blueprints.
+                    By attaching a component to handle the perk system on the player's character, we unlocked 2
+                    elements of our gameplay that would be of vital importance to the overall experience, the first was progression and the second which was arguably more important
+                    was a perk capacity. Allowing the player to receive and hold endless perks would turn the player into a god in the game, eventually reaching the point where
+                    they would simply be unkillable in the basic room encounters. While our perk system was being developed, we were in the process of perfecting our ideal
+                    level for the players.
+                </p>
+                <hr>
+                <p class="sub-title-text">Level Design</p>
+                <p class="card-text">Level Design in the Ninth Circle was a particularly difficult aspect of our game. As of today, not many 3D roguelike games exist, and if
+                    they did, they were never really noticeable or as large in popularity compared to other famous titles such as Hades and the Binding of Isaac. We had to make our
+                    own attempt at discovering the formula for 3D level design in the roguelike genre, a painstaking process that took many level iterations before settling on a style
+                    that fit the mechanics we served to the players.
+                </p>
+                <hr>
+                <p class="sub-title-text">Enemy Behavior</p>
                 <p class="card-text">My next task was to parse and gather information from MXF files which were
                     responsible
                     for the transfer of video and audio data of a movie. These came in the form of encoded packets with
@@ -137,16 +185,15 @@
                     and frames into a folder to be used in digital playback.
                 </p>
                 <hr>
-                <p class="sub-title-text">Perk Component</p>
-                <p class="card-text">The culmination of my work at Imbed was the digital playback engine. It required
-                    the entirety
-                    of my programs and parsers in order to function correctly. Using a cyclical buffer, we synchronized
-                    the playback
-                    of audio and video frames, and if the flag was set, played the subtitles in sync with the rest of
-                    the movie. The
-                    combination of these 3 projects provided the testing environment for the rest of the embedded
-                    applications we would
-                    include on the cinema server itself.
+                <p class="sub-title-text">UI Development</p>
+                <p class="card-text">My next task was to parse and gather information from MXF files which were
+                    responsible
+                    for the transfer of video and audio data of a movie. These came in the form of encoded packets with
+                    corresponding
+                    keys designated by the standards of cinema. My job was to parse through these files in the form of a
+                    breadth-first search algorithm, logging all keys and nested keys before identifying all necessary
+                    packets. Once all the video and audio packets were identified in the tree, I extracted the audio
+                    and frames into a folder to be used in digital playback.
                 </p>
                 <hr>
                 <p class="sub-title-text">VFX</p>
