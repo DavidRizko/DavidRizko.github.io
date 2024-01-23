@@ -19,7 +19,6 @@
 <style>
     body {
         background-color: #730000;
-        /* #53617b */
     }
 
     .navbar {
@@ -79,13 +78,11 @@
         font-size: 40px;
         font-weight: 800;
         color: #f5f5f5;
-        /* f1f6f9 */
     }
 
     .sub-title-text {
         font-size: 26px;
         color: #f5f5f5;
-        /*f1f6f9*/
     }
 
     .image-container {
@@ -99,6 +96,13 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+
+    .contact-icon {
+        width: 40px;
+        margin-right: 24px;
+        margin-top: 15px;
+        align-items: center;
     }
 </style>
 
@@ -210,7 +214,7 @@
                 </p>
                 <hr>
                 <p class="sub-title-text">Perk Component</p>
-                <img src="..." alt="Perk Component Image" class="card-img">
+                <img src="../../assets/ninth-circle-perk-picture2.png" alt="Perk Component Image" class="card-img">
                 <p class="card-text">The perk system development proved particularly intriguing as we reached a crucial
                     point in gameplay balancing. Our goal was to enhance the player's basic attributes, such as movement
                     speed, magazine size, and weapon damage. The architecture of the perk system involved spawning an
@@ -218,6 +222,7 @@
                     a target component, and when picked up by the player, it recalculated one of the mentioned basic
                     attributes, attaching it to the perk container managed by the main character's blueprints.
                 </p>
+                <img src="../../assets/ninth-circle-perk-picture1.png" alt="Perk Component Image 2" class="card-img">
                 <p class="card-text">
                     By incorporating a component to handle the perk system on the player's character, we unlocked two
                     vital elements of our gameplay experience. The first was progression, and the second, arguably more
@@ -340,7 +345,16 @@
                 </p>
                 <hr>
             </div>
-            <div class="card-footer bg-transparent border-success">Links to Itch Page and Github</div>
+            <div class="card-footer bg-transparent border-success">
+                <div class="icon-container">
+                    <a href="https://www.github.com/whyttaker/TheNinthCircle" target="_blank">
+                        <img src="../../assets/github-icon-white.png" alt="Github Game Page" class="contact-icon">
+                    </a>
+                    <a href="https://the6dagger.itch.io/the-ninth-circle" target="_blank">
+                        <img src="../../assets/itch-icon.svg" alt="Itch Game Page" class="contact-icon">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
