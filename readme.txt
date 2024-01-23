@@ -10,6 +10,14 @@ Talking to classmates about class material, assignment requirements, etc. is a g
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
+
+JUSTIFICATION OF CSS ERRORS:
+All my css errors are from the exact same problem which is not actually an issue at all. It stems from the fact that my background is contrasted badly with my text color,
+but the bootstrap element I'm using, which is a card in all of my project pages, is using a color that puts an immense amount of focus onto words, contrary to what the
+errors are trying to show. They all say the contrast difference needs to be checked, but essentially, it checks the wrong background color in comparison with the text color.
+The other erros I am getting are text decoration problems of hyperlinks which I have found that changing them would actually confuse the user viewing the portfolio rather than
+help them read it better.
+
 13/13
 - 1/1 Readme
 - 2/2 Basic HTML content
